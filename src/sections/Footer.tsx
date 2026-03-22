@@ -103,9 +103,7 @@ export const Footer = () => {
               <ul className="space-y-3">
                 <li>
                   <a 
-                    href="https://cba1a086-75f3-4204-b96a-07b1c1a99fe3-00-3nksespx9q1z9.picard.replit.dev:5000/privacy-policy"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/privacy"
                     className="text-[14px] text-white/60 hover:text-white transition-colors"
                   >
                     Privacy
@@ -113,9 +111,7 @@ export const Footer = () => {
                 </li>
                 <li>
                   <a 
-                    href="https://cba1a086-75f3-4204-b96a-07b1c1a99fe3-00-3nksespx9q1z9.picard.replit.dev:5000/terms"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/terms"
                     className="text-[14px] text-white/60 hover:text-white transition-colors"
                   >
                     Terms

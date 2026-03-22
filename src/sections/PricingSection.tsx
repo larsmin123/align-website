@@ -12,15 +12,10 @@ const plans = [
     period: '/mo',
     yearlyPeriod: '/yr',
     description: 'Begin your practice with core features.',
-    features: [
-      '3 meditations/month',
-      '3 meditation styles',
-      'Deep Transformation',
-      'Classic Manifestation',
-      'Affirmation Flow',
-      'Journaling',
-      'Insights',
-    ],
+    meditations: '3 meditations/month',
+    styleCount: '3 meditation styles',
+    styles: ['Deep Transformation', 'Classic Manifestation', 'Affirmation Flow'],
+    features: ['Journaling', 'Insights'],
     highlighted: false,
   },
   {
@@ -30,17 +25,10 @@ const plans = [
     period: '/mo',
     yearlyPeriod: '/yr',
     description: 'Deepen your practice with advanced tools.',
-    features: [
-      '5 meditations/month',
-      '5 meditation styles',
-      'Deep Transformation',
-      'Classic Manifestation',
-      'Affirmation Flow',
-      'Yoga Nidra',
-      'Alpha Method',
-      'Journaling',
-      'Insights',
-    ],
+    meditations: '5 meditations/month',
+    styleCount: '5 meditation styles',
+    styles: ['Deep Transformation', 'Classic Manifestation', 'Affirmation Flow', 'Yoga Nidra', 'Alpha Method'],
+    features: ['Journaling', 'Insights'],
     highlighted: true,
   },
   {
@@ -50,21 +38,10 @@ const plans = [
     period: '/mo',
     yearlyPeriod: '/yr',
     description: 'The complete manifestation system.',
-    features: [
-      '10 meditations/month',
-      'All 8 meditation styles',
-      'Deep Transformation',
-      'Classic Manifestation',
-      'Affirmation Flow',
-      'Yoga Nidra',
-      'Alpha Method',
-      'Somatic',
-      'Future Self',
-      'Sleep Programming',
-      'Offline downloads',
-      'Journaling',
-      'Insights',
-    ],
+    meditations: '10 meditations/month',
+    styleCount: 'All 8 meditation styles',
+    styles: ['Deep Transformation', 'Classic Manifestation', 'Affirmation Flow', 'Yoga Nidra', 'Alpha Method', 'Somatic', 'Future Self', 'Sleep Programming'],
+    features: ['Offline downloads', 'Journaling', 'Insights'],
     highlighted: false,
   },
 ];
@@ -199,7 +176,47 @@ export const PricingSection = ({ onSelect }: PricingSectionProps) => {
                 </p>
               </div>
 
-              <ul className="space-y-3 mb-8 flex-grow">
+              {/* Core features */}
+              <div className="mb-6">
+                <p className={`text-[14px] font-medium mb-2 ${
+                  plan.highlighted ? 'text-white' : 'text-[#1A1A18]'
+                }`}>
+                  {plan.meditations}
+                </p>
+                <p className={`text-[13px] mb-3 ${
+                  plan.highlighted ? 'text-white/70' : 'text-[#6B6B6B]'
+                }`}>
+                  {plan.styleCount}
+                </p>
+              </div>
+
+              {/* Meditation styles - visually separated */}
+              <div className={`mb-6 pb-6 border-b ${
+                plan.highlighted ? 'border-white/20' : 'border-[#E5E5E5]'
+              }`}>
+                <p className={`text-[11px] uppercase tracking-wider mb-3 ${
+                  plan.highlighted ? 'text-white/50' : 'text-[#9E9E9E]'
+                }`}>
+                  Includes
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {plan.styles.map((style) => (
+                    <span 
+                      key={style}
+                      className={`text-[11px] px-2 py-1 rounded ${
+                        plan.highlighted 
+                          ? 'bg-white/10 text-white/80' 
+                          : 'bg-[#F5F5F5] text-[#6B6B6B]'
+                      }`}
+                    >
+                      {style}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Other features */}
+              <ul className="space-y-2 mb-8 flex-grow">
                 {plan.features.map((feature) => (
                   <li 
                     key={feature}

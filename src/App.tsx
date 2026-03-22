@@ -12,6 +12,8 @@ import { ClosingSection } from './sections/ClosingSection';
 import { Footer } from './sections/Footer';
 import { SupportPage } from './pages/SupportPage';
 import { MarketingPage } from './pages/MarketingPage';
+import { PrivacyPage } from './pages/PrivacyPage';
+import { TermsPage } from './pages/TermsPage';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -72,6 +74,8 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/support" element={<SupportPage />} />
         <Route path="/marketing" element={<MarketingPage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
+        <Route path="/terms" element={<TermsPage />} />
       </Routes>
     </Router>
   );
