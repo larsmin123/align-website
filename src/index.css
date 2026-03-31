@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 60 7% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 60 7% 10%;
+    --primary: 60 7% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 97%;
+    --secondary-foreground: 60 7% 10%;
+    --muted: 0 0% 97%;
+    --muted-foreground: 0 0% 42%;
+    --accent: 220 100% 59%;
+    --accent-foreground: 0 0% 100%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 220 100% 59%;
+    --radius: 0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-[#1A1A18] antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* ALIGN Wordmark - lowercase with 16% letter-spacing */
+.align-wordmark {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.16em;
+  text-transform: lowercase;
+  color: #1A1A18;
+}
+
+.align-wordmark-white {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.16em;
+  text-transform: lowercase;
+  color: #FFFFFF;
+}
+
+.align-wordmark-large {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: clamp(48px, 8vw, 120px);
+  letter-spacing: 0.16em;
+  text-transform: lowercase;
+  color: #1A1A18;
+  line-height: 1;
+}
+
+.align-wordmark-large-white {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: clamp(48px, 8vw, 120px);
+  letter-spacing: 0.16em;
+  text-transform: lowercase;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+/* Micro label */
+.micro-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9E9E9E;
+}
+
+/* Body text */
+.body-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #6B6B6B;
+}
+
+/* Scientific/Button styles - rectangular, no radius */
+.btn-scientific {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  border: 1px solid #1A1A18;
+  background: transparent;
+  color: #1A1A18;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-scientific:hover {
+  background: #1A1A18;
+  color: #FFFFFF;
+}
+
+.btn-scientific-white {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  border: 1px solid #FFFFFF;
+  background: transparent;
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-scientific-white:hover {
+  background: #FFFFFF;
+  color: #1A1A18;
+}
+
+/* Section base */
+.section-full {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Quote styles */
+.quote-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: clamp(18px, 2.5vw, 28px);
+  line-height: 1.6;
+  color: #1A1A18;
+  font-style: normal;
+}
+
+.quote-author {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #6B6B6B;
+  margin-top: 16px;
+}
+
+/* Thin separators */
+.separator {
+  height: 1px;
+  background: #E5E5E5;
+}
+
+.separator-dark {
+  height: 1px;
+  background: #333333;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C0C0C0;
+}
+
+/* Selection */
+::selection {
+  background: rgba(26, 26, 24, 0.1);
+  color: #1A1A18;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 26, 24, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* QR Code placeholder */
+.qr-placeholder {
+  width: 160px;
+  height: 160px;
+  border: 1px solid #E5E5E5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
