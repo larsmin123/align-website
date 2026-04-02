@@ -99,7 +99,7 @@ export const HeroSection = ({ onDownload }: HeroSectionProps) => {
         onClick={onDownload}
         className="btn-scientific"
       >
-        Begin Session
+        Pre-register
       </button>
     </section>
   );

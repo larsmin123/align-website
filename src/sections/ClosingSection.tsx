@@ -89,7 +89,7 @@ export const ClosingSection = ({ onDownload }: ClosingSectionProps) => {
           ref={taglineRef}
           className="text-[15px] text-white/70 max-w-md mx-auto mb-10"
         >
-          Download now. Begin your practice.
+          Be the first to know when align goes live.
         </p>
 
         {/* CTA Button */}
@@ -98,7 +98,7 @@ export const ClosingSection = ({ onDownload }: ClosingSectionProps) => {
           onClick={onDownload}
           className="btn-scientific-white"
         >
-          Download
+          Pre-register
         </button>
       </div>
     </section>

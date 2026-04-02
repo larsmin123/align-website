@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Navigation } from '../components/Navigation';
-import { DownloadModal } from '../components/DownloadModal';
+import { PreRegisterModal } from '../components/PreRegisterModal';
 import { HeroSection } from '../sections/HeroSection';
 import { HowItWorksSection } from '../sections/HowItWorksSection';
 import { PricingSection } from '../sections/PricingSection';
@@ -31,7 +31,7 @@ export const Home = () => {
       <Navigation onDownload={openModal} />
 
       {/* Download Modal */}
-      <DownloadModal isOpen={isModalOpen} onClose={closeModal} />
+      <PreRegisterModal isOpen={isModalOpen} onClose={closeModal} />
 
       {/* Main content - Simple One Pager */}
       <main className="relative">

@@ -62,7 +62,7 @@ export const Navigation = ({ onDownload }: NavigationProps) => {
           onClick={onDownload}
           className="btn-scientific text-[11px] py-3 px-5"
         >
-          Download
+          Pre-register
         </button>
       </div>
     </nav>
