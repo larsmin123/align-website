@@ -10,7 +10,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const { email } = req.body;
 
   if (!email || typeof email !== 'string' || !email.includes('@')) {
-    return res.status(400).json({ error: 'Ongeldig e-mailadres' });
+    return res.status(400).json({ error: 'Invalid email address.' });
   }
 
   try {
@@ -36,6 +36,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(200).json({ success: true });
   } catch (err) {
     console.error('Google Sheets error:', err);
-    return res.status(500).json({ error: 'Er ging iets mis, probeer opnieuw.' });
+    return res.status(500).json({ error: 'Something went wrong. Please try again.' });
   }
 }
